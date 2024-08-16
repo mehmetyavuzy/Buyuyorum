@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamilelik Takibi</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* Geçiş efekti için CSS animasyonları */
+        @keyframes slidy {
+            0% { left: 0%; }
+            20% { left: 0%; }
+            25% { left: -100%; }
+            45% { left: -100%; }
+            50% { left: -200%; }
+            70% { left: -200%; }
+            75% { left: -300%; }
+            95% { left: -300%; }
+            100% { left: -400%; }
+        }
+
+        #slider { overflow: hidden; }
+        #slider figure img { width: 20%; float: left; }
+        #slider figure {
+            position: relative;
+            width: 500%;
+            margin: 0;
+            padding: 0;
+            font-size: 0;
+            animation: 10s slidy infinite;
+        }
+        #slider figure img { float: left; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BÜYÜYORUM</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Anasayfa</a></li>
+            <li><a href="gebelik.html">Gebelik Takibi</a></li>
+            <li><a href="spin.html">İsim Çarkı</a></li>
+            <li><a href="bebek.html">Bebeğin Resimleri</a></li>
+            <li><a href="../profil.php">Profilim</a></li>
+            <li><a href="../logout.php">Çıkış</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="anasayfa">
+            <h2>Anasayfa</h2>
+            <div id="slider">
+                <figure>
+                    <img src="1.png" alt="Resim 1">
+                    <img src="2.png" alt="Resim 2">
+                    <img src="3.png" alt="Resim 3">
+                </figure>
+            </div>
+            <p>Hamilelik sürecinizde size rehberlik edecek haftalık önerileri ve annelikle ilgili bilgileri bulabileceğiniz Hamilelik Takibi'ne hoş geldiniz.</p>
+        </section>
+    </main>
+    <footer>
+        <p>Telif Hakkı &copy; 2024 BÜYÜYORUM</p>
+    </footer>
+</body>
+</html>

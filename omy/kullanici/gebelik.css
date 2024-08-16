@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #13b1fb;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    background-color:  #13b1fb;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    background-image: url('bab.jfif'); /* Arka plan resmi */
+    background-size: cover; /* Resmin alanı tamamen kaplamasını sağlar */
+    background-position: center; /* Resmin ortalanmasını sağlar */
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+   grid-template-columns: repeat(4, 1fr); /* 4 sütun yapısı */
+    gap: 20px;
+    justify-items: center;
+}
+
+.grid-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    transition: transform 0.2s;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    background-color: #f0f0f0;
+}
+
+footer {
+    background-color:  #13b1fb;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}

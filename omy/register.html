@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Ol</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <header>
+        <h1 class="header-title">BÜYÜYORUM!</h1>
+    </header>
+    <nav>
+        <ul><!-- Menu kısmı başlığın altındaki-->
+            <li><a href="index.html">Anasayfa</a></li>
+            <li><a href="login.html">Kullanıcı Girişi</a></li>
+            <li><a href="register.html">Kayıt Ol</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Kayıt Ol</h2>
+        <form id="registerForm" action="register.php" method="POST">
+            <div class="form-group">
+                <label for="first_name">Ad:</label>
+                <input type="text" id="first_name" name="first_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="last_name">Soyad:</label>
+                <input type="text" id="last_name" name="last_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <span id="email_error_message" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="phone_number">Telefon Numarası:</label>
+                <input type="text" id="phone_number" name="phone_number">
+            </div>
+
+            <div class="form-group">
+                <label for="birth_date">Doğum Tarihi:</label>
+                <input type="date" id="birth_date" name="birth_date">
+            </div>
+            <div class="form-group">
+                <label for="gender">Cinsiyet:</label>
+                <select id="gender" name="gender" required>
+                    <option value="Male">Erkek</option>
+                    <option value="Female">Kadın</option>
+                </select>
+                
+            </div>
+
+            <div class="form-group">
+                <label for="pregnancy_weeks">Kaç Haftalık Hamile:</label>
+                <input type="number" id="pregnancy_weeks" name="pregnancy_weeks" min="1" max="40" required>
+                <span id="error_message" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="baby_name">Bebeğin Adı:</label>
+                <input type="text" id="baby_name" name="baby_name">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Şifre:</label>
+                <input type="password" id="password" name="password" minlength="8" maxlength="32" required>
+                <span id="password_error_message" class="error-message"></span>
+            </div>
+
+            <button type="submit">Kayıt Ol</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById("pregnancy_weeks").addEventListener("input", function() {
+            var input = this.value;
+            var errorMessage = document.getElementById("error_message");
+
+            if (input > 40) {
+                errorMessage.innerHTML = "Lütfen 1 ile 40 arasında bir değer girin.";
+                errorMessage.style.color = "red";
+            } else {
+                errorMessage.innerHTML = "";
+            }
+        });
+
+        document.getElementById("registerForm").addEventListener("submit", function(event) {
+            var emailInput = document.getElementById("email");
+            var emailErrorMessage = document.getElementById("email_error_message");
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailPattern.test(emailInput.value)) {
+                emailErrorMessage.innerHTML = "Email adresi geçerli değil.";
+                emailErrorMessage.style.color = "red";
+                event.preventDefault();
+            } else {
+                emailErrorMessage.innerHTML = "";
+            }
+
+            var passwordInput = document.getElementById("password");
+            var passwordErrorMessage = document.getElementById("password_error_message");
+
+            if (passwordInput.value.length < 8 || passwordInput.value.length > 32) {
+                passwordErrorMessage.innerHTML = "Şifre en az 8, en fazla 32 karakter olmalıdır.";
+                passwordErrorMessage.style.color = "red";
+                event.preventDefault();
+            } else {
+                passwordErrorMessage.innerHTML = "";
+            }
+        });
+    </script>
+</body>
+</html>

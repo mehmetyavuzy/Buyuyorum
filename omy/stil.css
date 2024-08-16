@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2ab7ca;
+    padding: 20px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+}
+
+.logo p {
+    margin: 0;
+    font-size: 14px;
+    color: #fff;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    background: url('bab.jfif') no-repeat center center fixed; /* Eğer bir arka plan resmi varsa */
+    background-size: cover;
+    min-height: calc(100vh - 80px); /* Header'ın yüksekliğine göre ayarlayın */
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.content h2 {
+    color: #2ab7ca;
+}
+
+.content h3 {
+    color: #172a3a;
+}
+
+.content p {
+    text-align: left;
+    color: #333;
+    line-height: 1.6;
+}

@@ -1,0 +1,44 @@
+/* styles.css */
+body {
+    background-color: #f0f0f0; /* Arka plan rengi */
+}
+
+header {
+    background-color: #ffcccc; /* Menü arka plan rengi */
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333333; /* Menü link rengi */
+    font-weight: bold;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #ffffff; /* Galeri arka plan rengi */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Gölgelendirme */
+}
+
+.gallery img {
+    max-width: 100%; /* Resimlerin maksimum genişliği ekran boyutuna göre otomatik ayarlanır */
+    height: auto;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px; /* Resim kenarlarının yuvarlatılması */
+}

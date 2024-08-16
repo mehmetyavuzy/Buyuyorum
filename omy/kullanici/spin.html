@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çarkıfelek</title>
+    <link rel="stylesheet" href="spin.css">
+</head>
+<body>
+    <nav>
+        <ul>  
+            <li><a href="index.html">Anasayfa</a></li>
+            <li><a href="gebelik.html">Gebelik Takibi</a></li>
+            <li><a href="spin.html">İsim Çarkı</a></li>
+            <li><a href="bebek.html">Bebeğin Resimleri</a></li>
+            <li><a href="../profil.php">Profilim</a></li>
+            <li><a href="../logout.php">Çıkış</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="wheel-container">
+            <h2>Erkek İsimleri</h2>
+            <canvas id="maleWheel" width="500" height="500"></canvas>
+            <button onclick="spinWheel('maleWheel', maleNames, 'maleResult')" class="spin-button">Döndür</button>
+            <p id="maleResult"></p>
+        </div>
+        <div class="wheel-container">
+            <h2>Kız İsimleri</h2>
+            <canvas id="femaleWheel" width="500" height="500"></canvas>
+            <button onclick="spinWheel('femaleWheel', femaleNames, 'femaleResult')" class="spin-button">Döndür</button>
+            <p id="femaleResult"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
