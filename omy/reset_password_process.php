@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Veritabanı bağlantısı
     $servername = "localhost";
     $username = "root";
-    $password = "Mehmet69436943";
+    $password = ";
     $dbname = "hamileliktakibi";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -46,8 +46,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $mail->isSMTP();
                 $mail->Host = 'smtp.mailgun.org';            // Mailgun SMTP sunucusu
                 $mail->SMTPAuth = true;
-                $mail->Username = 'postmaster@sandboxdd999c03ee3947a49e2effda8ff8acb6.mailgun.org'; // Mailgun SMTP kullanıcı adı
-                $mail->Password = '0d278aafbc7334228e1f4c507b07b7eb-0996409b-cbed98bb';            // Mailgun SMTP parolası
+                $mail->Username =  // Mailgun SMTP kullanıcı adı
+                $mail->Password =             // Mailgun SMTP parolası
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Güvenli bağlantı türü: tls
                 $mail->Port = 587;                         // TCP bağlantı portu
 
